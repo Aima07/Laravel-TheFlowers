@@ -23,30 +23,60 @@ Aplikasi manajemen surat adalah sebuah sistem yang dirancang untuk memudahkan pe
 
 Aplikasi ini sangat berguna bagi organisasi atau perusahaan yang ingin mengelola surat masuk dan keluar dengan cara yang lebih modern dan terorganisir. Pengguna dapat dengan mudah mengakses dan mencari surat yang diperlukan melalui fitur pencarian yang disediakan.
 
-## Sponsor
+1. **Instalasi:**
+   - Clone repository ini ke mesin lokal Anda.
+   - Jalankan perintah `composer install` untuk menginstal dependensi Laravel.
+   - Salin file `.env.db_uaspweb2.sql` menjadi `.env` dan sesuaikan konfigurasi database.
+   - Jalankan perintah `php artisan key:generate` untuk menghasilkan key aplikasi.
+   - Migrasi dan seed database dengan perintah `php artisan migrate --seed`.
 
-Kami ingin mengucapkan terima kasih kepada sponsor kami yang telah mendukung pengembangan aplikasi ini.
+2. **Menjalankan Aplikasi:**
+   - Jalankan server lokal dengan perintah `php artisan serve`.
+   - Buka browser dan akses `http://localhost:8000`.
 
-### Mitra Premium
+3. **Mengelola Surat Masuk:**
+   - Masuk ke aplikasi dan navigasikan ke halaman "Surat Masuk".
+   - Klik tombol "Tambah Surat Masuk" untuk mencatat surat masuk baru.
+   - Isi formulir dengan informasi yang diperlukan dan simpan.
+   - Anda dapat mencari dan melihat detail surat masuk yang telah tersimpan.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+4. **Mengelola Surat Keluar:**
+   - Masuk ke aplikasi dan navigasikan ke halaman "Surat Keluar".
+   - Klik tombol "Tambah Surat Keluar" untuk mencatat surat keluar baru.
+   - Isi formulir dengan informasi yang diperlukan dan simpan.
+   - Anda dapat mencari dan melihat detail surat keluar yang telah tersimpan.
+
+5. **Mengelola Lampiran:**
+   - Saat menambahkan atau mengedit surat, Anda dapat mengunggah lampiran terkait.
+   - Lampiran dapat diakses dan diunduh dari detail surat.
+
+## Teknologi
+
+Aplikasi manajemen surat ini dibangun menggunakan teknologi-teknologi modern yang memungkinkan pengelolaan surat yang efisien dan terorganisir. Berikut adalah beberapa teknologi yang digunakan:
+
+- **[Laravel](https://laravel.com):** Framework PHP yang kuat dan elegan untuk membangun aplikasi web.
+- **[Bootstrap](https://getbootstrap.com):** Framework CSS yang responsif untuk desain antarmuka yang menarik.
+- **[Vue.js](https://vuejs.org):** Framework JavaScript progresif untuk membangun antarmuka pengguna interaktif.
+- **[MySQL](https://www.mysql.com):** Sistem manajemen basis data relasional untuk penyimpanan data yang andal.
+- **[Docker](https://www.docker.com):** Platform untuk mengembangkan, mengirim, dan menjalankan aplikasi dalam kontainer.
+
+## Sumber Daya
+
+Untuk mempelajari lebih lanjut tentang teknologi yang digunakan dalam aplikasi ini, Anda dapat merujuk ke sumber daya berikut:
+
+- **[Dokumentasi Laravel](https://laravel.com/docs):** Panduan lengkap dan referensi untuk Laravel.
+- **[Bootstrap](https://getbootstrap.com/docs):** Dokumentasi resmi Bootstrap.
+- **[Vue.js](https://vuejs.org/v2/guide/):** Panduan resmi Vue.js.
+- **[MySQL](https://dev.mysql.com/doc/):** Dokumentasi MySQL.
+- **[Docker](https://docs.docker.com/):** Panduan dan referensi untuk Docker.
+
+## Catatan
+
+*  Program ini masih dalam tahap pengembangan.
+*  Fitur yang tersedia masih terbatas.
 
 ## Berkontribusi
 
 Terima kasih telah mempertimbangkan untuk berkontribusi pada pengembangan aplikasi manajemen surat ini! Panduan kontribusi dapat ditemukan dalam dokumentasi aplikasi.
 
-## Lisensi
 
-Aplikasi manajemen surat ini adalah perangkat lunak sumber terbuka yang dilisensikan di bawah [lisensi MIT](https://opensource.org/licenses/MIT).
