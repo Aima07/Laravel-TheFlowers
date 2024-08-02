@@ -1,0 +1,76 @@
+@extends ('layout.app')
+
+@section('content')
+ <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Surat Keluar</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+              <li class="breadcrumb-item active">Surat Keluar</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+<!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+           
+
+                    <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Detail Surat Bernomor</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form method="POST" action="{{ route('surat-keluar.store') }}" enctype="multipart/form-data">
+                @csrf
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="">No. Surat</label>
+                    <input type="text" class="form-control" value="{{ $suratKeluar->nomor_surat }}" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Penerima</label>
+                    <input type="text" class="form-control" value="{{ $suratKeluar->penerima }}" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Perihal</label>
+                    <input type="text" class="form-control" value="{{ $suratKeluar->perihal }}" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Tanggal</label>
+                    <input type="text" class="form-control" value="{{ $suraKeluar->tanggal_surat }}"readonly>
+                  </div>
+                @if($suratKeluar->lampiran)
+                <div class="form-group">
+                <label for="">Lampiran</label>
+                <a href="{{ url('uploads/'.$suratKeluar->lampiran) }}" class="form-control">{{ $suratKeluar->lampiran }}</a>
+                </div>
+                @endif
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <a href="{{ route('surat-keluar.index') }}" class="btn btn-warning float-right">Kembali</a>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+@endsection
